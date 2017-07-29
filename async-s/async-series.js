@@ -17,11 +17,8 @@ var task3 =function(callback){
 console.log(">>series:");
 async.series([task1,task2,task3]);
 
-console.log(">>parallel:");
-async.parallel([task1, task2, task3]);
 
-
-
+console.log(">> each series")
 var items = ['a','b','c','d'];
 
 async.eachSeries(items, function(item, callback){
