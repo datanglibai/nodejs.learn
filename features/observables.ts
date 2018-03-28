@@ -15,4 +15,14 @@ const singer$ = Rx.Observable
 .scan(x=>x+1)   //accumulater
 .map(count => count % numWords)
 .map(index=>words[index]);
-singer$.subscribe(v=>console.log(v));
+//singer$.subscribe(console.log);
+
+// const round$ = Rx.Observable.interval(1000).flatMap(()=>singer$);
+// round$.subscribe(console.log);
+
+//switchmap will cancel previous observables!, that's why effects use it to help cancel http request.
+//in one word, switchMap emit values from the most recent result.
+const round2$ = Rx.Observable.interval(5000).switchMap(()=>singer$);    
+round2$.subscribe(console.log);
+
+//next, Observable.never
