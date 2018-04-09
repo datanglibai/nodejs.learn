@@ -1,10 +1,10 @@
 import * as Rx from 'rxjs'
 
 //map is one to one
-Rx.Observable.from([1,3,5]).map(x=>[x, x+1]).subscribe(v=>console.log(v));
+// Rx.Observable.from([1,3,5]).map(x=>[x, x+1]).subscribe(v=>console.log(v));
 
-//flat map is one to one sequence, finally to one flat sequence, no nested observables
-Rx.Observable.from([1,3,5]).flatMap(x=>[x, x+1]).subscribe(v=>console.log(v));
+// //flat map is one to one sequence, finally to one flat sequence, no nested observables
+// Rx.Observable.from([1,3,5]).flatMap(x=>[x, x+1]).subscribe(v=>console.log(v));
 
 
 //one singer sing one word, and rotate
