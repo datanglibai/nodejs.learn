@@ -1,6 +1,7 @@
 let numTest1 = "789";
 let numTest2 = "12";
 
+// 0 is not well handled
 
 function bigMultiply(num1, num2) {
     let tempResult = [];
